@@ -6,5 +6,5 @@ from .forms import ArticlesAdminForm
 @admin.register(Articles)
 class ArticlesAdmin(admin.ModelAdmin):
     form = ArticlesAdminForm
-    list_display = ("title", "description", "cover_image", "article_file", "created_at")
-    exclude = ("cover_image", "article_file")  # Hide URL fields from admin form
+    list_display = ("title", "description", "cover_image", "content", "created_at")
+    exclude = ("cover_image",)  # Hide URL fields from admin form

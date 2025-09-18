@@ -1,0 +1,120 @@
+/* About Page */
+.about-container {
+  max-width: 90%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: inherit; /* Inherit from body */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Default box shadow (light theme) */
+  color: inherit;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Theme Box Shadow */
+body.light-theme .about-container {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Light theme box shadow */
+}
+
+/* Dark Theme Box Shadow */
+body.dark-theme .about-container {
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2); /* Dark theme box shadow */
+}
+
+.about-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  color: inherit;
+}
+
+/* Admin Section */
+.adminhead {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.adminhead h1 {
+  width: 25%;
+  font-size: 2rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: inherit;
+}
+
+.admin-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 2rem;
+}
+
+.admin-card {
+  background-color: inherit;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Default box shadow (light theme) */
+  text-align: center;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Theme Box Shadow for Admin Cards */
+body.light-theme .admin-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light theme box shadow */
+}
+
+/* Dark Theme Box Shadow for Admin Cards */
+body.dark-theme .admin-card {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Dark theme box shadow */
+}
+
+.admin-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-card h3,
+.admin-card p {
+  color: inherit;
+}
+
+.social-icons a {
+  color: inherit;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: inherit;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 80px;
+}
+
+.contact-section h2,
+.contact-section p,
+.contact-section a {
+  color: inherit;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,114 @@
+/* Reset and base layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: #CADCFC;
+  color: #00246B;
+}
+
+/* Dark Theme (Inverted colors) */
+body.dark-theme {
+  background-color: #00246B;
+  color: #CADCFC;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.theme-toggle .icon {
+  color: inherit;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.theme-toggle .icon:hover {
+  transform: scale(1.05);
+  color: #82a2fa;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: inherit; /* Inherit from body */
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Default box shadow */
+  transition: box-shadow 0.2s ease-in-out; /* Smooth transition for shadow */
+}
+
+/* Light Theme Box Shadow */
+body.light-theme .navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light theme shadow */
+}
+
+/* Dark Theme Box Shadow */
+body.dark-theme .navbar {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2); /* Dark theme shadow */
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  max-width: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+body.light-theme .logo:hover{
+  background-color: #00246B;
+}
+body.dark-theme .logo:hover{
+  background-color: #CADCFC;
+}
+
+/* Navbar Menu */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin-left: 3rem;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit; /* Automatically switches based on theme */
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+  color: #82a2fa; /* Highlight color on hover */
+}

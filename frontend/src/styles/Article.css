@@ -1,0 +1,83 @@
+/* Article Page Styles */
+.article-container {
+  max-width: 900px;       /* slightly narrower for blog readability */
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: inherit;
+  border-radius: 16px;
+  color: inherit;
+  text-align: left;       /* left-align text */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Light Theme */
+body.light-theme .article-container {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme */
+body.dark-theme .article-container {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.article-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  animation: glow 3s infinite ease-in-out;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+/* Cover image for selected article */
+.cover-image {
+  max-width: 100%;       /* never exceed container width */
+  height: auto;          /* maintain aspect ratio */
+  border-radius: 12px;
+  display: block;
+  margin: 1rem 0;        /* spacing above & below */
+  object-fit: contain;   /* scale without cropping */
+}
+
+/* Article Content */
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;          /* spacing between paragraphs and images */
+}
+
+.article-content h1,
+.article-content h2 {
+  margin: 1rem 0;
+}
+
+.article-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.article-content img {
+  max-width: 100%;       /* never exceed parent width */
+  height: auto;          /* keep aspect ratio */
+  border-radius: 8px;
+  display: block;        /* removes inline spacing issues */
+  margin: 1rem 0;        /* spacing above & below image */
+  object-fit: contain;   /* ensure image scales without cropping */
+}
+
+
+/* Animations (reuse) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  50% { text-shadow: 0 0 20px rgba(0,0,0,0.2); }
+  100% { text-shadow: 0 0 5px rgba(0,0,0,0.1); }
+}
